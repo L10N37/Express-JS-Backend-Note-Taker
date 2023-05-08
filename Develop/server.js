@@ -26,12 +26,17 @@ app.get('/notes', (req, res) => {
 });
 
 // API routes
-app.get('/api/notes', (req, res) => {
-  fs.readFile(__dirname + '/db/db.json', 'utf8', (err, data) => {
-    if (err) throw err;
-    res.json(JSON.parse(data));
-  });
+app.get("/api/notes", function(req, res) {
+  // Read the db.json file
+  const notes = JSON.parse(fs.readFileSync("./db/db.json"));
+
+  // Filter out entries that have empty title and text
+  const filteredNotes = notes.filter(note => note.title !== "" || note.text !== "");
+
+  // Send the filtered notes as the response
+  res.json(filteredNotes);
 });
+
 
 app.post('/api/notes', (req, res) => {
   const newNote = {};
