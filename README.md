@@ -45,6 +45,13 @@ This is an application to demonstrate the use of Express JS on the backend. We r
 We were advised to used Heroku but I ran into a few issues with a change of email address and their 2FA requirements. Once you remove the login details from the Authenticator app, you can not proceed with the 2FA login. Customer service was contacted multiple times, but the assignment is due (tomorrow). Render is absolutely free, and there were no dramas. I believe it is a suitable replacement for Heroku in this use case to demonstrate the working backend functionality of the app.
 
 <br>
+
+<p align="left">
+  <img src="assets\images\backend-deployment.png" width="400">
+</p>
+
+
+<br>
 <br>
 
 ## A Live Link to the Application
